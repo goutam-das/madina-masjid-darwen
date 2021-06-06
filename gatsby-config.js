@@ -16,5 +16,12 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Cinzel Decorative\:400,700`],
+        display: "swap",
+      },
+    },
   ],
 };
