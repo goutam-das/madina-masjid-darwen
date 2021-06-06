@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/madina-masjid-darwen",
   siteMetadata: {
     title: "Madina Masjid Darwen",
   },
