@@ -103,7 +103,7 @@ const SocialLinks = () => {
 const SocialLinksContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   img {
     height: 40px;
