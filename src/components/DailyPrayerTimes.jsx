@@ -31,6 +31,8 @@ const Center = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `;
 
 const Container = styled.div`

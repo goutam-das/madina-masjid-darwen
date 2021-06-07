@@ -44,7 +44,8 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h3`
-  font-size: 36px;
+  text-transform: uppercase;
+  font-size: 30px;
   color: #fff;
   text-align: center;
   position: relative;

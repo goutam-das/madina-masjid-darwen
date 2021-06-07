@@ -72,9 +72,9 @@ export const LogoImage = styled.img`
 export const BackgroundImage = styled.div`
   padding: 0 4%;
   min-height: 640px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-gap: 5%;
+  display: grid;
+  grid-template-columns: 45% 50%;
   ${({ src }) =>
     src &&
     `
