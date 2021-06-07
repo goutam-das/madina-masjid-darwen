@@ -106,8 +106,8 @@ const SocialLinksContainer = styled.div`
   align-items: flex-start;
 
   img {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
   }
 
   a {
