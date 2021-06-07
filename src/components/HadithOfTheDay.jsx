@@ -33,6 +33,8 @@ const Container = styled.div`
   border-radius: 5px;
   max-width: 1024px;
   margin: auto;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0 20px;
 `;
 
 const Title = styled.h1`

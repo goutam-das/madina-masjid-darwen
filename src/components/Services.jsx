@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import darwinImg from "../images/darwin.png";
 const Service = () => {
   const [services] = React.useState([
     {
@@ -51,12 +51,30 @@ export default Service;
 const ServiceCard = ({ item }) => {
   return (
     <Card>
+      <ImageContainer>
+        <Image src={darwinImg} alt="darwin" />
+        <Dashed />
+      </ImageContainer>
       <CardTitle>{item.title}</CardTitle>
       <CardBody>{item.body}</CardBody>
       <CardLink href={item.link}>Learn more</CardLink>
     </Card>
   );
 };
+
+const ImageContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+const Image = styled.img`
+  height: 64px;
+  width: 64px;
+`;
+const Dashed = styled.div`
+  flex: 1;
+  border-bottom: 1px dashed #efefef;
+`;
 
 const Container = styled.div`
   background-color: #fff;

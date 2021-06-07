@@ -7,7 +7,7 @@ import HadithOfTheDay from "../components/HadithOfTheDay";
 import MakeADonetion from "../components/MakeADonetion";
 import Services from "../components/Services";
 import ProgramsAndEvent from "../components/ProgramsAndEvent";
-import { Main, BackgroundImage, Overlay } from "../styles";
+import { Main, BackgroundImage } from "../styles";
 
 const IndexPage = () => {
   return (
@@ -17,7 +17,6 @@ const IndexPage = () => {
         <BackgroundImage src="https://darwenmosque.co.uk/wp-content/uploads/2017/07/events-3-1.jpg">
           <DailyPrayerTimes />
           <HadithOfTheDay />
-          <Overlay />
         </BackgroundImage>
         <MakeADonetion />
         <Services />
