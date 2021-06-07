@@ -10,6 +10,10 @@ import {
   FooterMenuItemLink,
   FooterMenuItemText,
 } from "../styles";
+import facebook from "../images/facebook.png";
+import instagram from "../images/instagram.png";
+import pinterest from "../images/pinterest.png";
+import twitter from "../images/twitter.png";
 
 const FooterComponent = () => {
   return (
@@ -56,12 +60,13 @@ const FooterComponent = () => {
         </Grid>
         <Grid>
           <Title>Social</Title>
-          <FooterMenu>
+          <SocialLinks />
+          {/* <FooterMenu>
             <FooterMenuItemLink>Facebook</FooterMenuItemLink>
             <FooterMenuItemLink>Pinterest</FooterMenuItemLink>
             <FooterMenuItemLink>Instagram</FooterMenuItemLink>
             <FooterMenuItemLink>Twitter</FooterMenuItemLink>
-          </FooterMenu>
+          </FooterMenu> */}
         </Grid>
       </FooterMenuContainer>
       <FooterDivider />
@@ -75,6 +80,41 @@ const FooterComponent = () => {
 };
 
 export default FooterComponent;
+
+const SocialLinks = () => {
+  return (
+    <SocialLinksContainer>
+      <a href="/">
+        <img src={facebook} alt="Facebook" />
+      </a>
+      <a href="/">
+        <img src={pinterest} alt="Pinterest" />
+      </a>
+      <a href="/">
+        <img src={instagram} alt="Instagram" />
+      </a>
+      <a href="/">
+        <img src={twitter} alt="Twitter" />
+      </a>
+    </SocialLinksContainer>
+  );
+};
+
+const SocialLinksContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    margin: 0 4px;
+  }
+`;
 
 const Grid = styled.div`
   display: grid;

@@ -104,8 +104,6 @@ export const Footer = styled.footer`
 export const FooterMenuContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
   padding: 36px 4%;
 `;
 export const FooterCopyrightContainer = styled.div`
