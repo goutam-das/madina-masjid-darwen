@@ -26,16 +26,6 @@ const HadithOfTheDay = () => {
 };
 
 export default HadithOfTheDay;
-const Container = styled.div`
-  flex: 1;
-  /* box-shadow: 0 0 2px 1px var(--base-color);
-  background: rgba(0, 0, 0, 0.3); */
-  border-radius: 5px;
-  max-width: 1024px;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 0 20px;
-`;
 
 const Title = styled.h1`
   font-size: 50px;
@@ -60,4 +50,26 @@ const Description = styled.p`
   text-align: center;
   position: relative;
   z-index: 1;
+`;
+
+const Container = styled.div`
+  flex: 1;
+  border-radius: 5px;
+  max-width: 1024px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0 20px;
+
+  @media (max-width: 480px) {
+    ${Title} {
+      font-size: 36px;
+    }
+    ${SubTitle} {
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    
+  }
 `;

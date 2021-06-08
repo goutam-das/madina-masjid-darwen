@@ -86,6 +86,9 @@ const Title = styled.h2`
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 const Grid = styled.div`
@@ -94,6 +97,14 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Card = styled.div`

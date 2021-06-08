@@ -40,7 +40,8 @@ export default PrayerTable;
 
 const TableConainer = styled.div``;
 const Table = styled.table`
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 32px auto;
   border-collapse: collapse;
 `;

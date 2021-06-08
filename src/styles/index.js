@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -85,6 +84,11 @@ export const BackgroundImage = styled.div`
     background-image: url(${src});
   `}
   position: relative;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
 `;
 
 export const Overlay = styled.div`

@@ -35,13 +35,7 @@ const Center = styled.div`
   z-index: 1;
 `;
 
-const Container = styled.div`
-  flex: 1;
-  box-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
-  background: #86b81d;
-  border-radius: 4px;
-  padding: 40px 4%;
-`;
+
 
 const Wrap = styled.div`
   max-width: 1024px;
@@ -71,4 +65,24 @@ const Text = styled.p`
 `;
 const Time = styled.time`
   color: #fff;
+`;
+
+const Container = styled.div`
+  flex: 1;
+  box-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+  background: #86b81d;
+  border-radius: 4px;
+  padding: 40px 4%;
+
+  @media (max-width: 480px) {
+    ${Title} {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    ${Title} {
+      font-size: 25px;
+    }
+  }
 `;

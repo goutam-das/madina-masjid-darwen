@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
-      {/* <Main>
+      <Main>
         <BackgroundImage src="https://darwenmosque.co.uk/wp-content/uploads/2017/07/events-3-1.jpg">
           <DailyPrayerTimes />
           <HadithOfTheDay />
@@ -21,7 +21,7 @@ const IndexPage = () => {
         <MakeADonetion />
         <Services />
         <ProgramsAndEvent />
-      </Main> */}
+      </Main>
       <Footer />
     </Layout>
   );

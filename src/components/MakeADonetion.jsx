@@ -44,6 +44,11 @@ const GridWraper = styled.div`
   max-width: 1024px;
   margin: auto;
   grid-column-gap: 50px;
+  padding: 0 10px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: auto 1fr auto;
+  }
 `;
 
 const DonationImage = styled.div`
@@ -72,4 +77,8 @@ const Title = styled.h2`
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;

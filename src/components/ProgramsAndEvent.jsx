@@ -57,6 +57,9 @@ const LiveSessionTitle = styled.h2`
   font-size: 30px;
   text-transform: uppercase;
   margin: 10px 0;
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const LiveSessionTime = styled.time`
@@ -135,6 +138,9 @@ const Title = styled.h2`
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
 `;
 
 const Grid = styled.div`
@@ -143,4 +149,8 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
