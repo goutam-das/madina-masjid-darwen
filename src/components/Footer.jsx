@@ -123,6 +123,14 @@ export const FooterMenuContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 36px 4%;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const FooterCopyrightContainer = styled.div`
   padding: 32px 0;
