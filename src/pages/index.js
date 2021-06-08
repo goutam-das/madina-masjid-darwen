@@ -21,8 +21,8 @@ const IndexPage = () => {
         <MakeADonetion />
         <Services />
         <ProgramsAndEvent />
-      </Main>
-      <Footer /> */}
+      </Main> */}
+      <Footer />
     </Layout>
   );
 };
