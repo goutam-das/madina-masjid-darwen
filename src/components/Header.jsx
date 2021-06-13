@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useWindowScroll } from "react-use";
 import mmdLogo from "../images/MMD-logo-03.png";
 import menu from "../images/menu.png";
 
 const HeaderComponent = () => {
+  const {y} = useWindowScroll();
   const [open, setOpen] = useState(false);
   return (
-    <Header>
+    <Header fixed={y >= 100}>
       <Menu onClick={() => setOpen((x) => !x)}>
         <MenuImage src={menu} />
       </Menu>
@@ -144,13 +146,18 @@ export const LogoImage = styled.img`
 `;
 
 export const Header = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  ${({ fixed }) =>
+    fixed &&
+    `
+    background-color: #232323;
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+  `}
+
   color: #ffffff;
-  background-color: #232323;
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
   height: var(--header-height);
   padding: 0 4%;
   display: flex;

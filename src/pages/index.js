@@ -6,6 +6,7 @@ import DailyPrayerTimes from "../components/DailyPrayerTimes";
 import HadithOfTheDay from "../components/HadithOfTheDay";
 import MakeADonetion from "../components/MakeADonetion";
 import Services from "../components/Services";
+import HeaderBackground from "../components/HeaderBackground";
 import ProgramsAndEvent from "../components/ProgramsAndEvent";
 import { Main, BackgroundImage } from "../styles";
 
@@ -13,6 +14,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
+      <HeaderBackground />
       <Main>
         <BackgroundImage src="https://darwenmosque.co.uk/wp-content/uploads/2017/07/events-3-1.jpg">
           <DailyPrayerTimes />
