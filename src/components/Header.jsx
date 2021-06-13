@@ -5,8 +5,9 @@ import mmdLogo from "../images/MMD-logo-03.png";
 import menu from "../images/menu.png";
 
 const HeaderComponent = () => {
-  const {y} = useWindowScroll();
+  const { y } = useWindowScroll();
   const [open, setOpen] = useState(false);
+  const [timetable, setTimetable] = useState(false);
   return (
     <Header fixed={y >= 100}>
       <Menu onClick={() => setOpen((x) => !x)}>
@@ -27,9 +28,32 @@ const HeaderComponent = () => {
           <HeaderLIMenuItem>
             <a href="/">SERVICE</a>
           </HeaderLIMenuItem>
-          <HeaderLIMenuItem>
-            <a href="/">TIME TABLE</a>
-          </HeaderLIMenuItem>
+          <HeaderLIMenuItemRelative>
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                setTimetable((x) => !x);
+              }}
+            >
+              TIME TABLE
+            </a>
+            <TimeTableDropdown open={timetable}>
+              <DropdownLink href="/">January</DropdownLink>
+              <DropdownLink href="/">February</DropdownLink>
+              <DropdownLink href="/">March</DropdownLink>
+              <DropdownLink href="/">April</DropdownLink>
+              <DropdownLink href="/">May</DropdownLink>
+              <DropdownLink href="/">June</DropdownLink>
+              <DropdownLink href="/">July</DropdownLink>
+              <DropdownLink href="/">August</DropdownLink>
+              <DropdownLink href="/">September</DropdownLink>
+              <DropdownLink href="/">October</DropdownLink>
+              <DropdownLink href="/">November</DropdownLink>
+              <DropdownLink href="/">December</DropdownLink>
+              <DropdownLink href="/">Ramadan</DropdownLink>
+            </TimeTableDropdown>
+          </HeaderLIMenuItemRelative>
           <HeaderLIMenuItem>
             <a href="/">NEWS</a>
           </HeaderLIMenuItem>
@@ -52,6 +76,52 @@ const HeaderComponent = () => {
 };
 
 export default HeaderComponent;
+
+const TimeTableDropdown = styled.ul`
+  list-style: none;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 140px;
+  padding: 8px 0;
+  @media (max-width: 1024px) {
+    display: none;
+    ${({ open }) =>
+      open &&
+      `
+      display: block;
+    `}
+  }
+  @media (min-width: 1025px) {
+    position: absolute;
+    top: calc(var(--header-height) * 1.05);
+  }
+`;
+
+const DropdownLink = ({ children, ...rest }) => (
+  <DropdownItem>
+    <a {...rest}>{children}</a>
+  </DropdownItem>
+);
+
+const DropdownItem = styled.li`
+  a {
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 0;
+    &:hover {
+      color: var(--base-color) !important;
+      border: 0;
+    }
+  }
+`;
 
 const Overlay = styled.div`
   @media (max-width: 1024px) {
@@ -93,7 +163,7 @@ export const HeaderLIMenuItem = styled.li`
   min-width: fit-content;
   margin: 0 10px;
 
-  a {
+  & > a {
     flex: 1;
     font-size: 16px;
     font-weight: bold;
@@ -182,6 +252,8 @@ export const Header = styled.header`
     ${HeaderULMenu} {
       margin-top: var(--header-height);
       flex-direction: column;
+      height: 100vh;
+      overflow: auto;
     }
     ${HeaderLIMenuItem} {
       flex: 0;
@@ -196,6 +268,33 @@ export const Header = styled.header`
             top: 7.5%;
           }
         }
+      }
+    }
+  }
+`;
+
+const HeaderLIMenuItemRelative = styled(HeaderLIMenuItem)`
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      width: 100% !important;
+      padding: 12px 0 !important;
+    }
+    ${TimeTableDropdown} {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @media (min-width: 1025px) {
+    position: relative;
+    ${TimeTableDropdown} {
+      display: none;
+    }
+    &:hover {
+      ${TimeTableDropdown} {
+        display: block;
       }
     }
   }
