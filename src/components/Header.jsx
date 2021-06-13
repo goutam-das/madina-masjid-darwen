@@ -250,7 +250,7 @@ export const Header = styled.header`
     padding: 0;
     justify-content: flex-start;
     ${HeaderULMenu} {
-      margin-top: var(--header-height);
+      padding-top: var(--header-height);
       flex-direction: column;
       height: 100vh;
       overflow: auto;
